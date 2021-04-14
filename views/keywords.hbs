@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Book app - key words</title>
+  <style>
+  		li{
+  			margin:20px;
+  		}
+	</style>
+</head>
+<body>
+  <a href="/add-keyword">Add keywords</a>
+  <h2>My Preference</h2>
+    <ul class="keywords">
+		{{#each keywords}}
+		<li>
+	  		<div>Fiction -{{Fiction}}</div>
+	  		<div>No fiction - {{Nonfiction}}</div>
+			<div>Romance - {{Romance}}</div>
+		 	</li>
+
+		{{/each}}
+  </ul>
+</body>
+</html>

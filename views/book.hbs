@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Book app - home page</title>
+  <style>
+  		li{
+  			margin:20px;
+  		}
+	</style>
+</head>
+<body>
+  <a href="/add-book">Add Book</a>
+  <h2>Today's recommendation</h2>
+    <ul class="book">		
+		    <div>
+			<img src="data:image/<%=image.img.contentType%>;base64,
+                     <%=image.img.data.toString('base64')%>">
+			</div>
+
+			{{#each book}}
+			<li>
+			<div>
+			{{thumbnail}}</div>
+	  		<div>Title: {{book-title}}</div>
+	  		<div>author: {{book-author}}</div>
+			<div>description: {{book-description}}</div>
+			<div>genre: {{book-genre}}</div>
+            <div>keywords: {{keywords}}</div>
+
+	  	</li>
+		{{/each}}
+  </ul>
+</body>
+</html>
