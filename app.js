@@ -10,6 +10,7 @@ const MongoClient = require('mongodb').MongoClient; //database
 const objectId = require('mongodb').ObjectID;
 var session = require('express-session');
 var MongoDBStore = require('connect-mongodb-session')(session);
+var PORT =5000;
 
 
 const app = express();
@@ -27,8 +28,8 @@ MongoClient.connect(url, (err, client) => { //this is localhost connection strin
 
 
 //starts a server
-app.listen(3000, () => {
-    console.log('listening on port 3000')
+app.listen(PORT, () => {
+    console.log('listening on port 5000')
   })
 })
 
