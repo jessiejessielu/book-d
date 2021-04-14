@@ -10,7 +10,7 @@ const MongoClient = require('mongodb').MongoClient; //database
 const objectId = require('mongodb').ObjectID;
 var session = require('express-session');
 var MongoDBStore = require('connect-mongodb-session')(session);
-var PORT =5000;
+var PORT = process.env.PORT || 5000;
 
 
 const app = express();
